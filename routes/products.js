@@ -21,7 +21,7 @@ function validateSeller(req, res, next) {
             
         }else{          
         // console.log(typeof decoded.isSeller);
-            console.log(decoded.isSeller)         
+            // console.log(decoded.isSeller)         
             next();
         }
       }
