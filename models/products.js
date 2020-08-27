@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost:27017/ecommerce', {useNewUrlParser: true, useUnifiedTopology: true})
 //Define a schema
-const Schema = mongoose.Schema;
-const ProductSchema = new Schema({
+const Product = new mongoose.Schema({
     name: {
         type: String,
         trim: true,
@@ -18,4 +19,4 @@ const ProductSchema = new Schema({
         required: true,
     }
 });
-module.exports = mongoose.model('Product', ProductSchema)
+module.exports = mongoose.model('Product', Product)
